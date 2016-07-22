@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.css">
+        <link rel="stylesheet" href="css/my.css">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <script src="js/jquery-1.11.3.min.js"></script>
+        <script src="js/jquery.mobile-1.4.5.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/my.js"></script>
+        <title>Feeds</title>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header" data-position="fixed" class="ui-header ui-bar-a ui-header-fixed slidedown" role="banner">
+                <h1>Feed Me</h1>
+            </div>
+            <div data-role="main" class="ui-content" id="main">
+                <form>
+                    <ul data-role="listview" data-inset="true">
+                        <li class="ui-field-contain">
+                            <label for="name2">Enter a feed URL:</label>
+                            <input type="text" id="feedurl" value="" data-clear-btn="true">
+                        </li>
+                        <li class="ui-body ui-body-b">
+                           <a href="#" id="getfeed" class="ui-shadow ui-btn ui-corner-all">Get Feeds</a>
+                        </li>
+                    </ul>
+                </form>
+                <center><p><strong>OR</strong></p></center>
+                <div data-role="tabs">
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a id="formget"  href="#fg" data-theme="a" data-ajax="false"><img src="img/formget-logo.png"/></a></li>
+                            <li><a id="inkthemes" href="#it" data-theme="a" data-ajax="false"><img width="237" height="49" src="img/inkthemes-logo.png"/></a></li>
+                        </ul>
+                    </div>
+                    <div id="fg" class="ui-content">
+                        <ul data-role="listview" data-inset="true" id="myTable">
+                        </ul>
+                    </div>
+                    <div id="it" class="ui-content">
+                        <ul data-role="listview" data-inset="true" id="myTable1">
+                        </ul>
+                    </div>
+                    <div id="it" class="ui-content">
+                        <ul data-role="listview" data-inset="true" id="myTable2">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
